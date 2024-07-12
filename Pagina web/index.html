@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Viajes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('fondo5.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f5efef;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            color: #f7f2f2; /* Color de letra negro */
+        }
+        header img {
+            width: 100px;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 3em; /* Tamaño del título aumentado */
+            color: #f7f5f5; /* Color de letra negro */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destacar el texto */
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fcf7f7; /* Color de letra negro */
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #fff; /* Color de letra blanco al pasar el mouse */
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .gallery-item {
+            text-align: center;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 100%;
+            vertical-align: middle;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery-item:hover .image-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px; /* Aumento del padding para mayor espacio */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+            color: #fff;
+            text-align: left;
+            transform: translateY(100%);
+            transition: opacity 0.3s, transform 0.3s;
+            opacity: 0;
+        }
+        .image-overlay h3 {
+            margin-top: 0;
+            font-size: 2em; /* Tamaño del título aumentado */
+        }
+        .image-overlay p {
+            font-size: 1.2em; /* Tamaño del texto aumentado */
+            margin: 10px 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .content > div {
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #000; /* Color de letra negro */
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+            border-radius: 10px;
+        }
+        .content > div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .content img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 0;
+        }
+        .content a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vertical Agencia de Viajes</h1>
+        </header>
+        <nav>
+            <a href="#destinos">Destinos</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#ofertas">Ofertas</a>
+        </nav>
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="paris.html">
+                    <img src="paris.jpg" alt="París">
+                    <div class="image-overlay">
+                        <h3>París</h3>
+                        <p>Descubre la magia de París, con sus paisajes icónicos y su romance inigualable.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="roma.html">
+                    <img src="roma.jpg" alt="Roma">
+                    <div class="image-overlay">
+                        <h3>Roma</h3>
+                        <p>Explora los vestigios del Imperio Romano y sumérgete en la autenticidad de la ciudad eterna.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="tokio.html">
+                    <img src="tokio.jpg" alt="Tokio">
+                    <div class="image-overlay">
+                        <h3>Tokio</h3>
+                        <p>Vive la experiencia única de Tokio, una metrópolis futurista que conserva su rica herencia cultural.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="newyork.html">
+                    <img src="new.jpg" alt="New York">
+                    <div class="image-overlay">
+                        <h3>New York</h3>
+                        <p>Descubre la energía de la Gran Manzana con sus icónicos rascacielos y su diversidad cultural.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <h2 id="destinos">Destinos Destacados</h2>
+                <img src="destinos.jfif" alt="Destinos">
+                <p>Explora nuestros destinos más populares y recomendados.</p>
+                <ul>
+                    <li><a href="cancun.html">Cancun</a></li>
+                    <li><a href="ixtapa.html">Ixtapa</a></li>
+                    <li><a href="carmen.html">Playa del Carmen</a></li>
+                    <li><a href="azul.html">Playa Azul</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="paquetes">Paquetes</h2>
+                <img src="paquete.jpg" alt="Paquetes">
+                <p>Descubre nuestros paquetes turísticos diseñados para ofrecerte la mejor experiencia.</p>
+                <ul>
+                    <li><a href="familiar.html">Paquete Familiar</a></li>
+                    <li><a href="luna.html">Paquete Luna de Miel</a></li>
+                    <li><a href="aventura.html">Paquete Aventura</a></li>
+                    <li><a href="relax.html">Paquete Relax</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="ofertas">Ofertas Especiales</h2>
+                <img src="ofertas.jpg" alt="Ofertas">
+                <p>Aprovecha nuestras ofertas especiales y viaja al mejor precio.</p>
+                <ul>
+                    <li><a href="ofertas.html">Descuento en reservas anticipadas</a></li>
+                    <li><a href="hora.html">Ofertas de última hora</a></li>
+                    <li><a href="todoincluido.html">Paquetes con todo incluido</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
